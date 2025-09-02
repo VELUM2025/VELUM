@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELUM – Lightweight Ultrafilm Indoor Airship Envelope</title>
+  <link rel="stylesheet" href="assets/app.css" />
+</head>
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* tr:first-child {
+    width: auto;
+  } */
+  h2 {
+  /* background-color: #00ffb5; Highlight color */
+  color: #00ffb5;            /* Text color */
+  /* padding: 10px;             Padding around the text */
+  border-radius: 5px;        /* Optional: Rounded corners */
+  font-weight: bold;         /* Bold text */
+  text-align: left;        /* Center the text */
+}
+/* Make the navbar horizontally scrollable AND sticky */
+.navbar {
+  overflow-x: auto;           /* Enable horizontal scrolling */
+  white-space: nowrap;        /* Prevent line breaks within the navbar */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+  position: sticky;           /* Make the navbar sticky */
+  top: 0;                     /* Stick to the top of the viewport */
+  z-index: 100;               /* Ensure it stays above other content */
+  background-color: #000;     /* Black background to match the header */
+  padding: 8px 0;             /* Add some padding for better visibility */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Add subtle shadow for depth */
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+/* Optional: Hide scrollbar for WebKit browsers */
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add gradient fading effect to indicate more content */
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  pointer-events: none;
+}
+
+.navbar::before {
+  left: 0;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
+
+.navbar::after {
+  right: 0;
+  background: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+}
+
+.navbar {
+  position: relative;
+}
+
+</style>
+
+<body class="relative">
+
+  <!-- Header -->
+  <header>
+
+    <div class="absolute inset-0 w-full h-full pointer-events-none">
+      <video src="assets/animation/header.mp4" class="w-full h-full object-cover" loop muted playsinline autoplay></video>
+    </div>
+
+    <div class="relative z-10 w-full flex flex-col">
+      <!-- Header Logo -->
+
+
+      <!-- Header Image -->
+      <div class="container lg:p-20 h-full flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-2xl md:text-5xl leading-tight">VELUM – Vehicle Envelope with Lightweight Ultrafilm<br>
+          for Minimal Leakage</h1>
+          <div class="mt-10">
+   
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+<nav class="navbar">
+  <ul id="nav">
+    <li><a href="#Introduction" class="p-4">Introduction</a></li>
+    <li><a href="#Manufacturing" class="p-4">Manufacturing</a></li>
+    <li><a href="#Coating" class="p-4">Coating</a></li>
+    <li><a href="#TestsResults" class="p-4">Tests &amp; Results</a></li>
+    <li><a href="#Deployment" class="p-4">Deployment</a></li>
+    <!-- REMOVE for double-blind:
+    <li><a href="#contact" class="p-4">Contact</a></li>
+    -->
+  </ul>
+</nav>
+
+<!-- ----------------------------------------------------------------------------->
+<!-- Introduction Section -->
+<section id="Introduction" class="bg-black text-white"  style="text-align: justify; padding-bottom: 20px;">
+  <div class="container redactor">
+    <div class="w-full">
+
+    <h2>introduction</h2>
+    <p> The envelope is fabricated by cutting precision-shaped membrane panels (“gores”) from LDPE film and
+      thermally bonding them to form the body. Sealing is performed with a heat roller that applies direct heat
+      and pressure under controlled conditions, allowing continuous, uniform joints that accommodate curved or 
+      unconventional geometries and sharp edges (areas where other sealing methods often fail). The process uses
+      a non-stick barrier and heat-resistant silicone mat to protect the film, while custom fixtures maintain edge alignment for complex shapes.
+      This method produces airtight, durable seams without adhesives, making it suitable for both simple and highly irregular airship designs.
+   </p>
+
+    <!-- 1. Why not drones -->
+    <p>
+      Mobile robots are increasingly required for exploration, inspection, and mapping in confined or hazardous environments. 
+      Multirotor drones are the most widely used aerial platform because of their agility and hover capability, 
+      but their flight time is severely constrained by battery capacity, typically limited to less than one hour. 
+      In addition, rotor downwash can disturb fragile surfaces, and vibration compromises the performance of onboard sensors.
+    </p>
+
+    <!-- 2. Why airships -->
+    <p>
+      Small lighter-than-air (SLTA) vehicles provide a viable alternative. By relying on buoyant lift instead of rotors, 
+      SLTAs can remain airborne for days, carry heavier payloads relative to their size, and offer a naturally stable 
+      platform with minimal power consumption. These features make them well suited for extended missions in 
+      narrow passages, humid conditions, and safety-critical environments where endurance and low interference are essential.
+    </p>
+
+    <!-- 3. Current practice and limitations -->
+    <p>
+      Despite these advantages, SLTA performance is constrained by the envelope material. 
+      Commercial systems typically rely on <strong>polyurethane (PU)</strong> or <strong>biaxially oriented polyester (Mylar®)</strong>. 
+      PU is flexible and durable but heavy and permeable to helium, reducing useful lift and operational time. 
+      Mylar has low permeability but is brittle and prone to catastrophic tearing, complicating handling and limiting its reliability. 
+      Both options impose design trade-offs that restrict autonomy in practice.
+    </p>
+
+    <!-- 4. Our solution -->
+    <p>
+      <strong>VELUM</strong> – Vehicle Envelope with Lightweight Ultrafilm for Minimal Leakage – addresses this gap 
+      by introducing a low-density polyethylene (LDPE) film reinforced with a specialized coating. 
+      LDPE provides lower mass and high tear tolerance, while the coating substantially reduces helium leakage 
+      without compromising flexibility or thermal bondability. This combination yields a lighter, stronger, 
+      and more reliable envelope material tailored to SLTA requirements.
+    </p>
+
+
+    <p>The main contributions of this work are:</p>
+    <ul style="margin-left:20px; line-height:1.6;">
+    <li>Identification of coated LDPE as a superior envelope material that balances low density, tear resistance, and gas-barrier performance better than PU and Mylar®.</li>
+    <li>Demonstration that coating treatment reduces helium leakage with only marginal weight increase, preserving the lightweight advantage of LDPE for SLTA design.</li>
+    <li>Development of a fabrication and coating protocol compatible with thermal bonding, ensuring manufacturability of large, airtight membranes.</li>
+    <li>Validation of the material and design in real confined and humid field environments, proving feasibility for long-duration SLTA operation beyond laboratory testing.</li>
+    </ul>
+
+
+      <!-- Figure Section -->
+      <!-- Figure 0 -->
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/Introduction.png" alt="Velum Airship" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Velum Airship.</figcaption>
+      </figure>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+<!-- ----------------------------------------------------------------------------->
+<!-- Manufacturing Section -->
+<section id="Manufacturing" class style="text-align: justify;">
+  <div class="container redactor">
+    <div class="w-full">
+
+  <h2>Manufacturing Process</h2>
+    <p> The envelope is fabricated by cutting precision-shaped membrane panels (“gores”) from LDPE film and
+      thermally bonding them to form the body. Sealing is performed with a heat roller that applies direct heat
+      and pressure under controlled conditions, allowing continuous, uniform joints that accommodate curved or 
+      unconventional geometries and sharp edges (areas where other sealing methods often fail). The process uses
+      a non-stick barrier and heat-resistant silicone mat to protect the film, while custom fixtures maintain edge alignment for complex shapes.
+      This method produces airtight, durable seams without adhesives, making it suitable for both simple and highly irregular airship designs.
+   </p>
+
+      <!-- Figure Section -->
+      <!-- Figure 1 -->
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/pic1- cuting pices.jpg" alt="Cutting LDPE panels" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Cutting of LDPE panels for the VELUM envelope.</figcaption>
+      </figure>
+
+      <!-- Figure 2 -->
+      <figure>
+        <img src="assets/images/pic2- sealing pices.jpg" alt="Sealing LDPE panels" 
+             style="width:100%; max-width:1800px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Sealing of LDPE panels for the VELUM envelope.</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Remove any gray overlay/desaturation applied elsewhere */
+  figure img, .redactor img, img {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    background: none !important;
+  }
+  figure::before, figure::after { content: none !important; background: none !important; }
+
+  /* (Optional) ensure header overlay can't tint later content */
+  header { position: relative; z-index: 0; }
+</style>
+
+
+
+
+    <!-- Add the MathJax script in the <head> or just before the closing </body> tag -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<!-- ----------------------------------------------------------------------------->
+
+<!-- Coating Section -->
+<section id="Coating" class="bg-black text-white" style="text-align: justify;">
+  <div class="container redactor">
+    <div class="w-full">
+
+    <h2>Coating</h2>
+      <p>
+       To improve helium retention and surface durability, the LDPE envelope is coated after all seams are sealed, since the coating
+        layer eliminates the film’s thermal-bonding capability. The process is performed while the envelope is inflated (“under-load”)
+       to avoid uncoated voids from later stretching.
+       A fluoro-siloxane sol-gel coating is applied using the optimal spray-and-wipe method, which combines high-pressure spraying with
+       microfiber wiping for maximum uniformity and adhesion. This yields a smooth, defect-free surface with minimal cracks or cavities,
+       outperforming spraying or wiping alone.
+      <p>  
+       Procedure:
+      <p>
+       Surface Preparation: The inflated envelope is secured in a rigid carbon-tube frame to prevent deformation. Dust and contaminants
+       are removed with an alcohol-based cleaner sprayed at 5–6 bar from 500 mm distance, followed by microfiber wiping.
+       <p>
+      Spraying: Two even spray passes at constant distance to control coating thickness and weight.
+      <p>
+      Wiping: Microfiber cloth dampened with coating liquid is used in a single direction within 10–15 minutes before gelation.
+      <p>
+        Curing: 48 hours at 25 ± 1 °C with ventilation. The surface becomes slightly cream-colored and rougher, indicating morphological changes that enhance barrier performance.
+      <p>
+      Performance Gains:
+       <p>
+      Helium leakage resistance is improved due to reduced surface defects and voids.
+      Hydrophobicity increases significantly, with the coated LDPE showing the highest contact angle (117.53°), improving water repellency as well.
+      Coating remains intact under repeated deformation, maintaining barrier integrity in handling and deployment.
+      </p>
+
+      <!-- Figure Section -->
+      <!-- Figure 1 -->
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/pic3- coating.jpg" alt="Cutting LDPE panels" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: VELUM envelope  coating.</figcaption>
+      </figure>
+      <!-- Video Section -->
+      <div style="margin-top: 20px;">
+        <video controls style="width: 100%; height: auto;">
+          <source src="assets/videos/coating.mp4" type="video/mp4">
+    
+        </video>
+      </div>
+      <!-- <figure>
+        <img src="assets/images/inputvector.png" alt="Input vectors for Ego-GRU and Collective-GRU" style="width:100%; max-width:1000px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Input vectors for Ego-GRU and Collective-GRU.</figcaption>
+      </figure> -->
+
+    </div>
+  </div>
+</section>
+  
+<!-- ----------------------------------------------------------------------------->
+<!-- Test and Result -->
+<section id="Test and Resul" class style="text-align: justify;">
+  <div class="container redactor">
+    <div class="w-full">
+
+     <h3>Tests and Results</h3>
+      <p>
+        The coated LDPE envelope was benchmarked against polyurethane (PU) and biaxially oriented polyester (Mylar®) 
+        through density, mechanical, and helium leakage evaluations. 
+        Results show that LDPE maintains a clear weight advantage, with only a small mass increase after coating, 
+        remaining lighter than PU while offering greater flexibility than Mylar®. 
+        In standardized tensile, tear, puncture, and burst tests, coated LDPE provided a balanced profile: 
+        more durable than Mylar® yet significantly lighter and less permeable than PU. 
+        Gas barrier measurements confirmed that the applied coating substantially reduced helium permeability, 
+        yielding the lowest leakage-to-mass ratio among the tested materials. 
+        A comparative scoring framework integrating all tests ranked coated LDPE highest overall, 
+        establishing it as the most suitable choice for lightweight, durable, and low-leakage SLTA envelopes.
+      </p>
+
+
+<!-- Table 5: Decision matrix -->
+<figure id="table-5" style="margin:28px 0;">
+  <figcaption style="font-weight:600; color:#fff; margin:0 0 8px 0;">
+    Table 5 — Decision matrix for material selection, comparing LDPE, PU, and Mylar across key parameters.
+  </figcaption>
+
+  <div style="overflow:auto; border:1px solid #ccc; border-radius:10px; background:#fff;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.95rem; color:#000;">
+      <thead style="background:#f4f4f4;">
+        <tr>
+          <th style="text-align:left; padding:12px; border-bottom:1px solid #ccc;">Technical Requirement</th>
+          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">LDPE</th>
+          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">PU</th>
+          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">Mylar</th>
+          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">Weight (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Density (g/m²)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">48 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">70 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">27.60 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">20%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Thickness (mm)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0498 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0524 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0256 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">8%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Tear Resistance (N)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5.62 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5.15 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">2.36 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Puncture Resistance (N)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">8.57 (3)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">7.60 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">18.54 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Tensile Strength (N)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">82.74 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">40.87 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">92.34 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Gas Barrier Performance (Leakage rate)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.64 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.08 (3)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.14 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Lift Retention (%)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">93.60 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">84.50 (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">98.50 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">10%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Hydrophobicity (CA)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">117.53° (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">92.75° (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">95.88° (2)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Burst Pressure (Structural Integrity)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">3.08 (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.11 (4)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">3.53 (1)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #ddd;">Reusable</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High (5)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">Low (1)</td>
+          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">2%</td>
+        </tr>
+        <tr style="background:#f4f4f4;">
+          <td style="padding:12px;font-weight:700;">Final Rank</td>
+          <td style="padding:12px;text-align:right;font-weight:700;">4.5</td>
+          <td style="padding:12px;text-align:right;font-weight:700;">2.77</td>
+          <td style="padding:12px;text-align:right;font-weight:700;">3.88</td>
+          <td style="padding:12px;text-align:right;font-weight:700;">100%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
+
+
+<p>
+  Gas-barrier evaluation for full-scale SLTA envelopes does not adhere to any specific ASTM standard. 
+  Conventional gas-leakage setups (e.g., standard leak detection chambers) are designed for small, flat test samples 
+  and cannot accommodate the large, complex geometries of LTA envelopes. Moreover, no existing detectors can directly 
+  and accurately measure helium leakage at the scale of full airship membranes.
+</p>
+
+<ul style="margin-left:20px; line-height:1.6;">
+  <li>
+    <strong>Lack of applicable ASTM standard:</strong> Existing standards such as ASTM D1434—used for measuring 
+    gas permeability of plastic films—are limited to small coupon samples and cannot be applied to entire envelopes.
+  </li>
+  <li>
+    <strong>Inadequacy of typical fixtures:</strong> Diffusion chambers and permeability testers are physically too 
+    small for even moderate-size airship envelopes, making them unsuitable for practical evaluation.
+  </li>
+  <li>
+    <strong>Special methods required for large envelopes:</strong> Industry often relies on differential-pressure, 
+    sweep-gas, “sweep-and-hold,” or “accumulation-and-purge” methods to assess helium permeability in 
+    airbags or large modules, rather than relying on small film coupons.
+  </li>
+  <li>
+    <strong>Practical implications:</strong> Our approach uses a full-envelope system test, capturing leakage 
+    behavior under realistic conditions rather than relying on small-scale proxies.
+  </li>
+</ul>
+<p>
+  Custom pillow-shaped samples (800 × 1200 mm) were fabricated from LDPE, PU, and Mylar films. 
+  Each sample was thermally sealed and inflated to <strong>4 kPa with helium</strong>, then suspended 
+  from a <strong>50 N load cell</strong> to monitor lift over time.  The lift was recorded continuously at 1.5-minute intervals for six hours in a sealed, temperature-controlled room (26–27 °C).  Initial stabilization (first 10 minutes) was excluded. 
+</p>
+
+<p>
+  This setup captures the <strong>combined effects</strong> of film permeability, seam quality, and geometry, making it more representative of real operational envelopes than small-scale 
+  diffusion tests. Durability was also assessed by subjecting each deflated sample to 
+  <strong>tumble agitation</strong> (30 minutes, no heat, with dryer balls), then repeating the 
+  helium retention protocol.
+</p>
+
+<!-- Four Pictures in One Line -->
+<div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px; justify-content:center;">
+
+  <figure style="width:23%; text-align:center; margin:0;">
+    <img src="assets/images/mylar-leak.png" alt="Pillow-shaped sample" 
+         style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> Mylar pillow</figcaption>
+  </figure>
+
+  <figure style="width:23%; text-align:center; margin:0;">
+    <img src="assets/images/ldpe-leak.png" alt="Sample on load cell" 
+         style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> LDPE pillow</figcaption>
+  </figure>
+
+  <figure style="width:23%; text-align:center; margin:0;">
+    <img src="assets/images/pu-leak.png" alt="Pressure sensor setup" 
+         style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> PU pillow</figcaption>
+  </figure>
+
+
+</div>
+
+
+<p>
+  <p>
+  <p>
+  </p>
+  Unlike the other tests (tear, puncture, tensile, and wettability) that followed ASTM standards, 
+  the <strong>burst test</strong> was performed using a protocol commonly adopted 
+  in the LTA industry for envelope evaluation. Pillow-shaped samples (800 × 1200 mm) 
+  were sealed and inflated with compressed air until rupture, while internal pressure 
+  was continuously recorded. This approach replicates the biaxial stress state 
+  experienced by inflated envelopes and highlights each material’s failure behavior.
+</p>
+
+<ul style="margin-left:20px; line-height:1.6;">
+  <li>
+    <strong>Maximum Pressure Capacity:</strong> Mylar reached the highest pressure (3.53 kPa) 
+    but failed explosively at the seam transition, reflecting its brittle nature. 
+    PU failed at the lowest pressure (1.11 kPa) after prolonged plastic deformation and leakage. 
+    LDPE withstood 3.08 kPa before rupture in the bulk film, indicating strong seals and 
+    a balanced strength–ductility profile.
+  </li>
+  <li>
+    <strong>Failure Mode:</strong> Mylar fragmented into multiple sharp tears, 
+    PU underwent ductile thinning and gradual tearing, 
+    while LDPE failed in a controlled, localized slit without catastrophic propagation.
+  </li>
+  <li>
+    <strong>Practical Implication:</strong> The LDPE membrane showed safer rupture behavior 
+    and reliable seam integrity, an advantage for reusable small indoor airships 
+    where uncontrolled failure would compromise missions.
+  </li>
+</ul>
+
+
+<!-- Video Section -->
+<div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px;">
+
+  <figure style="width:32%; text-align:center; margin:0;">
+    <video controls style="width:100%; height:auto;">
+      <source src="assets/videos/mylar-burst.mp4" type="video/mp4">
+    </video>
+    <img src="assets/images/mylar-pic.png" alt="Mylar Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;">Mylar Burst Test</figcaption>
+  </figure>
+
+  <figure style="width:32%; text-align:center; margin:0;">
+    <video controls style="width:100%; height:auto;">
+      <source src="assets/videos/LDPE-burst .mp4" type="video/mp4">
+    </video>
+    <img src="assets/images/LDPE-pic.png" alt="LDPE Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;">LDPE Burst Test</figcaption>
+  </figure>
+
+    <figure style="width:32%; text-align:center; margin:0;">
+    <video controls style="width:100%; height:auto;">
+      <source src="assets/videos/pu-burst.mp4" type="video/mp4">
+    </video>
+    <img src="assets/images/PU-pic.png" alt="PU Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
+    <figcaption style="font-size:0.9rem; margin-top:6px;">PU Burst Test</figcaption>
+  </figure>
+
+</div>
+
+
+
+</section>
+
+<!-- ----------------------------------------------------------------------------->
+<!-- Deployment Section -->
+<section id="Deployment" class="bg-black text-white"  style="text-align: justify; padding-bottom: 20px;">
+  <div class="container redactor">
+    <div class="w-full">
+
+  <!-- Deployment Section -->
+  <section id="Deployment" class="bg-black text-white" style="text-align: justify; padding-bottom: 20px;">
+  <div class="container redactor">
+    <div class="w-full">
+
+      <h2>Deployment</h2>
+      <p>
+        To evaluate <strong>VELUM’s real-world feasibility</strong>, a deployment trial was carried out in a partially flooded cave 
+        characterized by narrow passages, high humidity, and fragile surfaces that preclude direct human access. 
+        These conditions replicate the type of confined, high-risk environments where small lighter-than-air (SLTA) 
+        vehicles provide a unique operational advantage over conventional drones. 
+      </p>
+
+      <p>
+        The coated low-density polyethylene (LDPE) envelope was selected based on its superior balance of 
+        <strong>lightweight construction, gas retention, and durability</strong>, as established in laboratory evaluations. 
+        Despite the addition of a heavier valve assembly (20.74 g, including a 7 g cap), the total envelope mass 
+        remained significantly lower than that of a comparable polyurethane (PU) design, confirming its suitability 
+        for constrained endurance-critical missions.
+      </p>
+
+      <p>
+        During the cave deployment, the coated LDPE airship demonstrated <strong>stable flight, minimal helium loss, 
+        and resilience under humid conditions</strong>. The lightweight membrane reduced structural load while maintaining 
+        envelope integrity, allowing reliable operation in passages where maneuverability and persistence are critical. 
+        These results validate the coated LDPE envelope as a practical solution for autonomous airship missions in 
+        confined and hazardous environments.
+      </p>  
+
+    <!-- Table (white background) -->
+    <figure style="margin:28px 0;">
+      <figcaption style="font-weight:600; color:#fff; margin:0 0 8px 0;">
+        Table — Performance parameters for single‑body indoor airships made from LDPE and PU (field comparison).
+      </figcaption>
+      <div style="overflow:auto; border:1px solid #ccc; border-radius:10px; background:#fff;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.95rem; color:#000;">
+          <thead style="background:#f4f4f4;">
+            <tr>
+              <th style="text-align:left; padding:12px; border-bottom:1px solid #ccc;">Parameter</th>
+              <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">LDPE</th>
+              <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">PU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Volume (m³)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.86</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.86</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Rigid Skeleton Weight (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">215</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">215</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Avionic Weight (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">223.62</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">223.62</td></tr>
+            <tr style="background:#f4f4f4;"><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Weight (Non‑Coated LDPE) (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">325</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">401</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Weight (Coated LDPE) (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">343</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">401</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Airship Free Payload Capacity (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">250</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">164</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Helium Loss Rate (g/h)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.7</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">4.2</td></tr>
+            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Moisture Absorption</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">None</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High</td></tr>
+            <tr><td style="padding:10px;">Operational Endurance (hours)</td><td style="padding:10px;text-align:right;">72</td><td style="padding:10px;text-align:right;">24</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+
+    <!-- Media -->
+    <div style="margin:22px 0 10px;">
+      <h3 style="margin:0 0 8px;font-size:1.25rem;">Gallery</h3>
+  
+      <!-- Video Section -->
+      <div style="margin-top: 20px;">
+        <video controls style="width: 100%; height: auto;">
+          <source src="assets/videos/Deployment.mp4" type="video/mp4">
+    
+        </video>
+      </div>
+      
+
+  </div>
+</section>
+
+
+
+
+
