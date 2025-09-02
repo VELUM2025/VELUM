@@ -127,15 +127,7 @@
   <div class="container redactor">
     <div class="w-full">
 
-    <h2>introduction</h2>
-    <p> The envelope is fabricated by cutting precision-shaped membrane panels (“gores”) from LDPE film and
-      thermally bonding them to form the body. Sealing is performed with a heat roller that applies direct heat
-      and pressure under controlled conditions, allowing continuous, uniform joints that accommodate curved or 
-      unconventional geometries and sharp edges (areas where other sealing methods often fail). The process uses
-      a non-stick barrier and heat-resistant silicone mat to protect the film, while custom fixtures maintain edge alignment for complex shapes.
-      This method produces airtight, durable seams without adhesives, making it suitable for both simple and highly irregular airship designs.
-   </p>
-
+    <h2>Introduction</h2>
     <!-- 1. Why not drones -->
     <p>
       Mobile robots are increasingly required for exploration, inspection, and mapping in confined or hazardous environments. 
@@ -243,13 +235,8 @@
   header { position: relative; z-index: 0; }
 </style>
 
-
-
-
-    <!-- Add the MathJax script in the <head> or just before the closing </body> tag -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 
 <!-- ----------------------------------------------------------------------------->
 
@@ -314,18 +301,13 @@
   <div class="container redactor">
     <div class="w-full">
 
-     <h3>Tests and Results</h3>
+     <h2>Tests and Results</h2>
       <p>
-        The coated LDPE envelope was benchmarked against polyurethane (PU) and biaxially oriented polyester (Mylar®) 
-        through density, mechanical, and helium leakage evaluations. 
-        Results show that LDPE maintains a clear weight advantage, with only a small mass increase after coating, 
-        remaining lighter than PU while offering greater flexibility than Mylar®. 
-        In standardized tensile, tear, puncture, and burst tests, coated LDPE provided a balanced profile: 
-        more durable than Mylar® yet significantly lighter and less permeable than PU. 
-        Gas barrier measurements confirmed that the applied coating substantially reduced helium permeability, 
-        yielding the lowest leakage-to-mass ratio among the tested materials. 
-        A comparative scoring framework integrating all tests ranked coated LDPE highest overall, 
-        establishing it as the most suitable choice for lightweight, durable, and low-leakage SLTA envelopes.
+        The coated LDPE envelope was benchmarked against polyurethane (PU) and Mylar® in density, mechanical, and helium-leakage tests. 
+        Results show LDPE maintained a clear weight advantage, with only a minor mass increase after coating. 
+        It proved more durable than Mylar®, significantly lighter and less permeable than PU, and delivered the lowest leakage-to-mass ratio. 
+        A comparative scoring matrix ranked coated LDPE highest overall, confirming it as the most suitable material for lightweight, durable,
+        and low-leakage SLTA envelopes.
       </p>
 
 
@@ -430,44 +412,13 @@
 </figure>
 
 
-<p>
-  Gas-barrier evaluation for full-scale SLTA envelopes does not adhere to any specific ASTM standard. 
-  Conventional gas-leakage setups (e.g., standard leak detection chambers) are designed for small, flat test samples 
-  and cannot accommodate the large, complex geometries of LTA envelopes. Moreover, no existing detectors can directly 
-  and accurately measure helium leakage at the scale of full airship membranes.
-</p>
+      </p>
+        Gas-barrier testing required custom methods, as no ASTM standards apply at full-envelope scale. 
+        Pillow samples (800 × 1200 mm) were helium-inflated to 4 kPa and suspended from a 50 N load cell in a controlled room (26–27 °C). 
+        Lift was monitored over six hours to capture permeability, seam quality, and geometry effects. 
+        Durability was assessed by tumble agitation before repeating retention tests.
+      </p>
 
-<ul style="margin-left:20px; line-height:1.6;">
-  <li>
-    <strong>Lack of applicable ASTM standard:</strong> Existing standards such as ASTM D1434—used for measuring 
-    gas permeability of plastic films—are limited to small coupon samples and cannot be applied to entire envelopes.
-  </li>
-  <li>
-    <strong>Inadequacy of typical fixtures:</strong> Diffusion chambers and permeability testers are physically too 
-    small for even moderate-size airship envelopes, making them unsuitable for practical evaluation.
-  </li>
-  <li>
-    <strong>Special methods required for large envelopes:</strong> Industry often relies on differential-pressure, 
-    sweep-gas, “sweep-and-hold,” or “accumulation-and-purge” methods to assess helium permeability in 
-    airbags or large modules, rather than relying on small film coupons.
-  </li>
-  <li>
-    <strong>Practical implications:</strong> Our approach uses a full-envelope system test, capturing leakage 
-    behavior under realistic conditions rather than relying on small-scale proxies.
-  </li>
-</ul>
-<p>
-  Custom pillow-shaped samples (800 × 1200 mm) were fabricated from LDPE, PU, and Mylar films. 
-  Each sample was thermally sealed and inflated to <strong>4 kPa with helium</strong>, then suspended 
-  from a <strong>50 N load cell</strong> to monitor lift over time.  The lift was recorded continuously at 1.5-minute intervals for six hours in a sealed, temperature-controlled room (26–27 °C).  Initial stabilization (first 10 minutes) was excluded. 
-</p>
-
-<p>
-  This setup captures the <strong>combined effects</strong> of film permeability, seam quality, and geometry, making it more representative of real operational envelopes than small-scale 
-  diffusion tests. Durability was also assessed by subjecting each deflated sample to 
-  <strong>tumble agitation</strong> (30 minutes, no heat, with dryer balls), then repeating the 
-  helium retention protocol.
-</p>
 
 <!-- Four Pictures in One Line -->
 <div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px; justify-content:center;">
@@ -489,43 +440,14 @@
          style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
     <figcaption style="font-size:0.9rem; margin-top:6px;"> PU pillow</figcaption>
   </figure>
-
-
 </div>
 
-
-<p>
-  <p>
-  <p>
-  </p>
-  Unlike the other tests (tear, puncture, tensile, and wettability) that followed ASTM standards, 
-  the <strong>burst test</strong> was performed using a protocol commonly adopted 
-  in the LTA industry for envelope evaluation. Pillow-shaped samples (800 × 1200 mm) 
-  were sealed and inflated with compressed air until rupture, while internal pressure 
-  was continuously recorded. This approach replicates the biaxial stress state 
-  experienced by inflated envelopes and highlights each material’s failure behavior.
-</p>
-
-<ul style="margin-left:20px; line-height:1.6;">
-  <li>
-    <strong>Maximum Pressure Capacity:</strong> Mylar reached the highest pressure (3.53 kPa) 
-    but failed explosively at the seam transition, reflecting its brittle nature. 
-    PU failed at the lowest pressure (1.11 kPa) after prolonged plastic deformation and leakage. 
-    LDPE withstood 3.08 kPa before rupture in the bulk film, indicating strong seals and 
-    a balanced strength–ductility profile.
-  </li>
-  <li>
-    <strong>Failure Mode:</strong> Mylar fragmented into multiple sharp tears, 
-    PU underwent ductile thinning and gradual tearing, 
-    while LDPE failed in a controlled, localized slit without catastrophic propagation.
-  </li>
-  <li>
-    <strong>Practical Implication:</strong> The LDPE membrane showed safer rupture behavior 
-    and reliable seam integrity, an advantage for reusable small indoor airships 
-    where uncontrolled failure would compromise missions.
-  </li>
-</ul>
-
+     <p>
+        Burst tests (800 × 1200 mm samples, compressed air) replicated biaxial stress conditions. 
+        Mylar reached the highest pressure but failed explosively, PU failed at the lowest pressure after ductile thinning, 
+        and LDPE ruptured at 3.08 kPa in a controlled slit, showing strong seals and safer failure behavior. 
+        This confirms LDPE’s balanced strength–ductility profile and reliable seam integrity for reusable airships.
+      </p>
 
 <!-- Video Section -->
 <div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px;">
@@ -556,8 +478,6 @@
 
 </div>
 
-
-
 </section>
 
 <!-- ----------------------------------------------------------------------------->
@@ -566,34 +486,23 @@
   <div class="container redactor">
     <div class="w-full">
 
-  <!-- Deployment Section -->
-  <section id="Deployment" class="bg-black text-white" style="text-align: justify; padding-bottom: 20px;">
-  <div class="container redactor">
-    <div class="w-full">
-
       <h2>Deployment</h2>
       <p>
-        To evaluate <strong>VELUM’s real-world feasibility</strong>, a deployment trial was carried out in a partially flooded cave 
-        characterized by narrow passages, high humidity, and fragile surfaces that preclude direct human access. 
-        These conditions replicate the type of confined, high-risk environments where small lighter-than-air (SLTA) 
-        vehicles provide a unique operational advantage over conventional drones. 
+        To validate <strong>VELUM’s real-world feasibility</strong>, we conducted a trial in a partially flooded cave with narrow passages,
+         high humidity, and fragile surfaces where direct human access is restricted—exactly the kind of confined,
+          high-risk environment where small lighter-than-air (SLTA) vehicles excel over conventional drones.
       </p>
 
       <p>
-        The coated low-density polyethylene (LDPE) envelope was selected based on its superior balance of 
-        <strong>lightweight construction, gas retention, and durability</strong>, as established in laboratory evaluations. 
-        Despite the addition of a heavier valve assembly (20.74 g, including a 7 g cap), the total envelope mass 
-        remained significantly lower than that of a comparable polyurethane (PU) design, confirming its suitability 
-        for constrained endurance-critical missions.
-      </p>
-
-      <p>
-        During the cave deployment, the coated LDPE airship demonstrated <strong>stable flight, minimal helium loss, 
-        and resilience under humid conditions</strong>. The lightweight membrane reduced structural load while maintaining 
-        envelope integrity, allowing reliable operation in passages where maneuverability and persistence are critical. 
-        These results validate the coated LDPE envelope as a practical solution for autonomous airship missions in 
-        confined and hazardous environments.
-      </p>  
+        The <strong>coated LDPE envelope</strong>—selected for its balance of low mass, durability,
+         and helium retention—outperformed polyurethane (PU) in full-scale use. Even with a heavier valve assembly (20.74 g, including a 7 g cap),
+          the LDPE envelope weighed only 343 g versus PU’s 401 g, preserving payload capacity for a lidar and micro-camera. Field results showed <strong>
+          stable flight, superior helium retention, moisture resistance, faster deployment,
+          and longer endurance</strong>. The LDPE vehicle supported a 250 g payload (vs. 164 g for PU), remained inflated for days without
+          refilling (PU required multiple refills per day), deployed in ~15 min (vs. 25 min), and sustained 72 h of operation (vs. 24 h). Together,
+          these outcomes validate coated LDPE as a <strong>robust, lightweight, and resilient</strong> material for
+           autonomous airship missions in confined and humid environments.
+      </p> 
 
     <!-- Table (white background) -->
     <figure style="margin:28px 0;">
@@ -624,17 +533,36 @@
       </div>
     </figure>
 
-    <!-- Media -->
-    <div style="margin:22px 0 10px;">
-      <h3 style="margin:0 0 8px;font-size:1.25rem;">Gallery</h3>
-  
-      <!-- Video Section -->
-      <div style="margin-top: 20px;">
-        <video controls style="width: 100%; height: auto;">
-          <source src="assets/videos/Deployment.mp4" type="video/mp4">
-    
-        </video>
-      </div>
+  <!-- Two videos side by side -->
+<div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px; justify-content:center;">
+
+  <figure style="width:48%; text-align:center; margin:0;">
+    <video controls style="width:100%; height:auto;">
+      <source src="assets/videos/experimental_test-01.mp4" type="video/mp4">
+    </video>
+    <figcaption style="font-size:0.9rem; margin-top:6px;">Flight test A</figcaption>
+  </figure>
+
+  <figure style="width:48%; text-align:center; margin:0;">
+    <video controls style="width:100%; height:auto;">
+      <source src="assets/videos/experimental_test-02.mp4" type="video/mp4">
+    </video>
+    <figcaption style="font-size:0.9rem; margin-top:6px;">Flight test B</figcaption>
+  </figure>
+
+   </div>
+
+  <!-- Video Section -->
+  <div style="margin-top: 20px; text-align:center;">
+  <figure style="margin:0; display:inline-block; width:100%;">
+    <video controls style="width: 100%; height: auto; display:block; margin:auto;">
+      <source src="assets/videos/Deployment.mp4" type="video/mp4">
+    </video>
+    <figcaption style="font-size:0.9rem; margin-top:6px; text-align:center;">
+      Cave Deployment
+    </figcaption>
+  </figure>
+  </div>
       
 
   </div>
