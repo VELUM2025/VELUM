@@ -517,174 +517,134 @@
         </table>
       </div>
     </figure>
-
-<!-- 3-wide responsive grid -->
-<div class="predeploy-gallery">
-  <!-- Row 1 (images) -->
-  <figure class="card"><img src="assets/images/9.png"  alt="Inflation and leak check"></figure>
-  <figure class="card"><img src="assets/images/3.png"  alt="Static lift and balance"></figure>
-  <figure class="card"><img src="assets/images/4.png"  alt="Control response test"></figure>
-
-  <!-- Row 2 (images) -->
-  <figure class="card"><img src="assets/images/13.png" alt="Handling in narrow corridor"></figure>
-  <figure class="card"><img src="assets/images/19.png" alt="Moisture exposure"></figure>
-  <figure class="card"><img src="assets/images/14.png" alt="Endurance run"></figure>
-
-  <!-- Row 3 (images) -->
-  <figure class="card"><img src="assets/images/18.png" alt="Handling in narrow corridor"></figure>
-  <figure class="card"><img src="assets/images/15.png" alt="Moisture exposure"></figure>
-  <figure class="card"><img src="assets/images/16.png" alt="Endurance run"></figure>
-
-  <!-- Row 4 (images) -->
-  <figure class="card"><img src="assets/images/17.png" alt="Handling in narrow corridor"></figure>
-  <figure class="card"><img src="assets/images/21.png" alt="Moisture exposure"></figure>
-  <figure class="card"><img src="assets/images/22.png" alt="Endurance run"></figure>
-
-  <!-- Row 5 (videos) — exactly 3 across like images -->
-  <figure class="card">
-    <video controls preload="none" poster="assets/images/9.png">
-      <source src="assets/videos/experimental_test-01.mp4" type="video/mp4">
-    </video>
-  </figure>
-  <figure class="card">
-    <video controls preload="none" poster="assets/images/3.png">
-      <source src="assets/videos/experimental_test-02.mp4" type="video/mp4">
-    </video>
-  </figure>
-  <figure class="card">
-    <video controls preload="none" poster="assets/images/4.png">
-      <source src="assets/videos/experimental_test-03.mp4" type="video/mp4">
-    </video>
-  </figure>
-</div>
-
-      <style>
-  /* grid */
-  #PreDeploy .predeploy-gallery{
-    display:grid;
-    gap:12px;
-    grid-template-columns:repeat(3,1fr);
-  }
-  /* tile look shared by imgs and videos */
-  #PreDeploy .card{
-    margin:0;
-    background:#0b0b0b;
-    border:1px solid #222;
-    border-radius:8px;
-    padding:8px;
-    overflow:hidden;
-  }
-  #PreDeploy img, 
-  #PreDeploy video{
-    width:100%; 
-    height:auto; 
-    display:block; 
-    border-radius:6px;
-  }
-  /* responsive breakpoints (same as you had) */
-  @media(max-width:900px){
-    #PreDeploy .predeploy-gallery{ grid-template-columns:repeat(2,1fr); }
-  }
-  @media(max-width:560px){
-    #PreDeploy .predeploy-gallery{ grid-template-columns:1fr; }
-  }
-</style>
-
-
-      
-<!-- Field Deployment Section -->
-<section id="FieldDeployment" class="bg-black text-white" style="text-align: justify; padding: 10px 0 24px;">
+<!-- ========================= -->
+<!-- Pre-Deployment Flight Tests -->
+<section id="PreDeploy" class="bg-black text-white" style="text-align:justify; padding:10px 0 24px;">
   <div class="container redactor">
     <div class="w-full">
-      <h2>Field Deployment in Cave Environment</h2>
+      <h2>Pre-Deployment Flight Tests</h2>
       <p style="margin-top:6px;">
-        The coated LDPE envelope was validated during a real mission in a partially flooded cave, 
-        characterized by narrow passages, high humidity, and harsh surfaces. 
-        The airship demonstrated stable flight, helium retention, and resilience in a confined and challenging setting.
+        Bench and indoor flight trials to verify buoyancy, controls, sealing integrity, and handling prior to the cave mission.
       </p>
 
-      <!-- 3-wide responsive grid -->
-      <div style="
-        display:grid; 
-        gap:12px; 
-        grid-template-columns: repeat(3, 1fr);
-        margin-top:20px;
-      ">
-        <!-- row1 -->
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/25.png" alt="VELUM entering narrow flooded passage" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/26.png" alt="VELUM in wide flooded chamber" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/27.png" alt="Cave deployment from kayak" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
+      <div class="media-grid">
+        <!-- images -->
+        <figure class="tile"><img src="assets/images/9.png"  alt="Inflation and leak check"></figure>
+        <figure class="tile"><img src="assets/images/3.png"  alt="Static lift and balance"></figure>
+        <figure class="tile"><img src="assets/images/4.png"  alt="Control response test"></figure>
 
-        <!-- row2 -->
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/24.png" alt="VELUM entering narrow flooded passage" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/23.png" alt="VELUM in wide flooded chamber" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
-        <figure style="margin:0; border-radius:8px; overflow:hidden;">
-          <img src="assets/images/8.png" alt="Cave deployment from kayak" style="width:100%; height:auto; border-radius:6px;">
-        </figure>
-        
-        <!-- Video Section -->
-        <div style="margin-top: 20px; text-align:center;">
-        <figure style="margin:0; display:inline-block; width:100%;">
-        <video controls style="width: 100%; height: auto; display:block; margin:auto;">
-        <source src="assets/videos/Deployment.mp4" type="video/mp4">
-        </video>
-       <figcaption style="font-size:0.9rem; margin-top:6px; text-align:center;">
-       Cave Deployment
-       </figcaption>
-       </figure>
-       </div>
-<style>
-  /* grid */
-  #PreDeploy .predeploy-gallery{
-    display:grid;
-    gap:12px;
-    grid-template-columns:repeat(3,1fr);
-  }
-  /* tile look shared by imgs and videos */
-  #PreDeploy .card{
-    margin:0;
-    background:#0b0b0b;
-    border:1px solid #222;
-    border-radius:8px;
-    padding:8px;
-    overflow:hidden;
-  }
-  #PreDeploy img, 
-  #PreDeploy video{
-    width:100%; 
-    height:auto; 
-    display:block; 
-    border-radius:6px;
-  }
-  /* responsive breakpoints (same as you had) */
-  @media(max-width:900px){
-    #PreDeploy .predeploy-gallery{ grid-template-columns:repeat(2,1fr); }
-  }
-  @media(max-width:560px){
-    #PreDeploy .predeploy-gallery{ grid-template-columns:1fr; }
-  }
-</style>
+        <figure class="tile"><img src="assets/images/13.png" alt="Handling in narrow corridor"></figure>
+        <figure class="tile"><img src="assets/images/19.png" alt="Moisture exposure"></figure>
+        <figure class="tile"><img src="assets/images/14.png" alt="Endurance run"></figure>
 
+        <figure class="tile"><img src="assets/images/18.png" alt="Handling in narrow corridor"></figure>
+        <figure class="tile"><img src="assets/images/15.png" alt="Moisture exposure"></figure>
+        <figure class="tile"><img src="assets/images/16.png" alt="Endurance run"></figure>
 
+        <figure class="tile"><img src="assets/images/17.png" alt="Handling in narrow corridor"></figure>
+        <figure class="tile"><img src="assets/images/21.png" alt="Moisture exposure"></figure>
+        <figure class="tile"><img src="assets/images/22.png" alt="Endurance run"></figure>
+
+        <!-- videos (3 across exactly like images) -->
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/9.png">
+            <source src="assets/videos/experimental_test-01.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/3.png">
+            <source src="assets/videos/experimental_test-02.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/4.png">
+            <source src="assets/videos/experimental_test-03.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
 
-      
+<!-- ========================= -->
+<!-- Field Deployment in Cave Environment -->
+<section id="FieldDeployment" class="bg-black text-white" style="text-align:justify; padding:10px 0 24px;">
+  <div class="container redactor">
+    <div class="w-full">
+      <h2>Field Deployment in Cave Environment</h2>
+      <p style="margin-top:6px;">
+        Validation in a partially flooded cave with narrow passages and high humidity. The airship maintained stable flight,
+        strong helium retention, and resilient handling in a confined setting.
+      </p>
 
-      
+      <div class="media-grid">
+        <!-- images -->
+        <figure class="tile"><img src="assets/images/25.png" alt="Cave chamber view 1"></figure>
+        <figure class="tile"><img src="assets/images/26.png" alt="Cave chamber view 2"></figure>
+        <figure class="tile"><img src="assets/images/27.png" alt="Cave passage view 3"></figure>
+
+        <figure class="tile"><img src="assets/images/24.png" alt="Cave passage view 4"></figure>
+        <figure class="tile"><img src="assets/images/23.png" alt="Cave chamber view 5"></figure>
+        <figure class="tile"><img src="assets/images/8.png"  alt="Cave deployment from kayak"></figure>
+
+        <!-- 1 video + 2 images to keep 3 per row -->
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/25.png">
+            <source src="assets/videos/Deployment.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="tile"><img src="assets/images/26.png" alt="Cave still frame A"></figure>
+        <figure class="tile"><img src="assets/images/27.png" alt="Cave still frame B"></figure>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ========================= -->
+<!-- Styles scoped to these two sections -->
+<style>
+  /* shared grid for both sections */
+  #PreDeploy .media-grid,
+  #FieldDeployment .media-grid{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* tile look (applies to both imgs & videos) */
+  #PreDeploy .tile,
+  #FieldDeployment .tile{
+    margin: 0;
+    background: #0b0b0b;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  #PreDeploy img, #PreDeploy video,
+  #FieldDeployment img, #FieldDeployment video{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  /* responsive breakpoints */
+  @media (max-width: 900px){
+    #PreDeploy .media-grid,
+    #FieldDeployment .media-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px){
+    #PreDeploy .media-grid,
+    #FieldDeployment .media-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 
 
 
