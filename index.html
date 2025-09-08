@@ -126,38 +126,16 @@
 <section id="Introduction" class="bg-black text-white"  style="text-align: justify; padding-bottom: 20px;">
   <div class="container redactor">
     <div class="w-full">
-
+      
     <h2>Introduction</h2>
     <p>
-        Multirotor drones are widely used for inspection and exploration in confined environments, 
-        but batteries limit their endurance, and rotor downwash can disturb fragile surfaces. 
-        Small lighter-than-air (LTA) vehicles provide a more stable and energy-efficient alternative, 
-        enabling long-duration operation in sensitive or hazardous settings.
+      This page complements a journal paper (submitted) on <b>VELUM</b>, a lightweight coated-LDPE membrane for
+      small lighter-than-air (SLTA) vehicles. It provides extra visuals and brief highlights only.
     </p>
     <p>
-      The performance of such vehicles is strongly constrained by the <b>envelope material</b>, 
-        which governs weight, durability, and gas retention. Conventional options such as 
-        <b>polyurethane (PU)</b> and <b>Mylar®</b> involve trade-offs: PU is durable but heavy and 
-        permeable to helium, while Mylar is lightweight and impermeable but brittle and prone to tearing. 
-        These limitations reduce payload capacity, endurance, and reliability in practice.
+      Conventional envelopes—<b>PU</b> (durable but heavy and more permeable) and <b>Mylar®</b> (light and tight but brittle)—force trade-offs.
+      Our <b>coated LDPE</b> approach targets low mass, better tear tolerance, and lower leakage while keeping simple, scalable fabrication.
     </p>
-
-      <p>
-        <b>VELUM – Vehicle Envelope with Lightweight Ultrafilm for Minimal Leakage</b> introduces a new 
-        membrane based on <b>low-density polyethylene (LDPE) with a thin protective coating</b>. 
-        This design combines low mass, improved tear resistance, and reduced helium loss, while remaining 
-        compatible with scalable fabrication methods.
-      </p>
-
-        <p>
-        <b>This work contributes by:</b></p>
-        <ul style="margin-left:20px; line-height:1.6;">
-        <li>Identifying a <b>lightweight alternative</b> to conventional PU and Mylar envelopes.</li>
-        <li>Developing a <b>coating process</b> that enhances gas retention without compromising manufacturability.</li>
-        <li>Demonstrating <b>durability and resilience</b> under mechanical stress and humid conditions.</li>
-        <li>Validating the material in <b>real deployment</b>, enabling longer endurance and higher payload capacity.</li>
-      </ul>
-
 
       <figure style="margin-bottom: 20px;">
         <img src="assets/images/cover.png" alt="Velum Airship" 
@@ -281,123 +259,24 @@
 </section>
   
 <!-- ----------------------------------------------------------------------------->
-<!-- Test and Result -->
-<section id="Test and Resul" class style="text-align: justify;">
-  <div class="container redactor">
-    <div class="w-full">
+    <h2>Tests &amp; Results</h2>
+    <p>
+      Only a short overview is shown here — full data and methods are detailed in the submitted paper.
+    </p>
 
-     <h2>Tests and Results</h2>
-      <p>
-        The coated LDPE envelope was benchmarked against polyurethane (PU) and Mylar® in density, mechanical, and helium-leakage tests. 
-        Results show LDPE maintained a clear weight advantage, with only a minor mass increase after coating. 
-        It proved more durable than Mylar®, significantly lighter and less permeable than PU, and delivered the lowest leakage-to-mass ratio. 
-        A comparative scoring matrix ranked coated LDPE highest overall, confirming it as the most suitable material for lightweight, durable,
-        and low-leakage SLTA envelopes.
-      </p>
+    <ul style="margin-left:20px; line-height:1.6;">
+      <li><b>Weight:</b> Coated LDPE remained lighter than PU, with only a minor mass increase after coating.</li>
+      <li><b>Durability:</b> Tear resistance higher than Mylar; seam strength remained reliable under stress.</li>
+      <li><b>Leakage:</b> Lowest leakage-to-mass ratio among all three materials tested.</li>
+      <li><b>Hydrophobicity:</b> Highest water-repellency (contact angle &gt;117°).</li>
+      <li><b>Burst test:</b> LDPE ruptured in a controlled slit (safe failure), PU failed at lower pressure, Mylar failed explosively.</li>
+    </ul>
 
-
-<!-- Table 5: Decision matrix -->
-<figure id="table-5" style="margin:28px 0;">
-  <figcaption style="font-weight:600; color:#fff; margin:0 0 8px 0;">
-    Table 5 — Decision matrix for material selection, comparing LDPE, PU, and Mylar across key parameters.
-  </figcaption>
-
-  <div style="overflow:auto; border:1px solid #ccc; border-radius:10px; background:#fff;">
-    <table style="width:100%; border-collapse:collapse; font-size:0.95rem; color:#000;">
-      <thead style="background:#f4f4f4;">
-        <tr>
-          <th style="text-align:left; padding:12px; border-bottom:1px solid #ccc;">Technical Requirement</th>
-          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">LDPE</th>
-          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">PU</th>
-          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">Mylar</th>
-          <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">Weight (%)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Density (g/m²)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">48 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">70 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">27.60 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">20%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Thickness (mm)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0498 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0524 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.0256 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">8%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Tear Resistance (N)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5.62 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5.15 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">2.36 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Puncture Resistance (N)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">8.57 (3)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">7.60 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">18.54 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Tensile Strength (N)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">82.74 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">40.87 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">92.34 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Gas Barrier Performance (Leakage rate)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.64 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.08 (3)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.14 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">15%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Lift Retention (%)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">93.60 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">84.50 (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">98.50 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">10%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Hydrophobicity (CA)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">117.53° (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">92.75° (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">95.88° (2)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Burst Pressure (Structural Integrity)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">3.08 (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.11 (4)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">3.53 (1)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">5%</td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border-bottom:1px solid #ddd;">Reusable</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High (5)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">Low (1)</td>
-          <td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">2%</td>
-        </tr>
-        <tr style="background:#f4f4f4;">
-          <td style="padding:12px;font-weight:700;">Final Rank</td>
-          <td style="padding:12px;text-align:right;font-weight:700;">4.5</td>
-          <td style="padding:12px;text-align:right;font-weight:700;">2.77</td>
-          <td style="padding:12px;text-align:right;font-weight:700;">3.88</td>
-          <td style="padding:12px;text-align:right;font-weight:700;">100%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</figure>
-
-
-      </p>
+    <p style="margin-top:14px;">
+      Visuals below illustrate representative leakage and burst behaviors.
+    </p>
+  
+     </p>
         Gas-barrier testing required custom methods, as no ASTM standards apply at full-envelope scale. 
         Pillow samples (800 × 1200 mm) were helium-inflated to 4 kPa and suspended from a 50 N load cell in a controlled room (26–27 °C). 
         Lift was monitored over six hours to capture permeability, seam quality, and geometry effects. 
