@@ -533,8 +533,27 @@
   html,body{margin:0;padding:0}
 </style>
 
+<style>
+  /* پهن‌تر کردن ظرف محتوا در دسکتاپ */
+  @media (min-width: 1200px){
+    .container.redactor{
+      /* پهنای مفید صفحه؛ هر عددی خواستی بگذار (1400–1600 هم خوبه) */
+      max-width: 1500px !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  }
+
+  /* اگر می‌خوای فقط بعضی سکشن‌ها پهن‌تر بشن (مثلاً Manufacturing/Coating) */
+  @media (min-width: 1200px){
+    #Manufacturing .container.redactor,
+    #Coating .container.redactor,
+    #FieldDeployment .container.redactor{
+      max-width: min(1600px, 95vw) !important;
+    }
+  }
+</style>
+
 </body>
 </html>
-
-
 
