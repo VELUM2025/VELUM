@@ -513,7 +513,27 @@
   }
 </style>" 
 
+<style>
 
+  :root{
+    --page-max:1100px; --section-py:24px; --container-px:16px;
+    --figure-m:12px; --grid-gap:10px;
+  }
+  .container.redactor{max-width:var(--page-max)!important;margin:auto!important;padding-inline:var(--container-px)!important;}
+  section{padding:var(--section-py) 0!important;}
+  h2{margin:10px 0 8px!important;} p{margin:10px 0!important;line-height:1.55;}
+  ul{margin:8px 0 8px 20px!important;}
+  figure{margin:var(--figure-m) 0!important;} figcaption{margin-top:6px!important;}
+  header .container{padding:1.5rem var(--container-px)!important;}
+  @media (min-width:1024px){ header .container{padding:3rem var(--container-px)!important;} }
+  #PreDeploy .gallery{gap:var(--grid-gap)!important;}
+  #PreDeploy .tile,#FieldDeployment .tile{padding:6px!important;}
+  #PreDeploy .media-grid,#FieldDeployment .media-grid{gap:var(--grid-gap)!important;}
+  html,body{margin:0;padding:0}
+</style>
+
+</body>
+</html>
 
 
 
