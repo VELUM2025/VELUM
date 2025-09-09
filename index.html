@@ -1,57 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELUM – Lightweight Ultrafilm Indoor Airship Envelope</title>
+  <link rel="stylesheet" href="assets/app.css" />
+</head>
+
 <style>
-  /* ===== uniform media look + clean 3-up grids (no HTML changes) ===== */
-
-  /* adjust if you want a different border color or roundness */
-  :root { --media-border:#222; --media-radius:8px; }
-
-  /* keep 3 items per row in these sections */
-  #PreDeploy .gallery,
-  #PreDeploy .media-grid,
-  #FieldDeployment .media-grid{
-    display:grid;
-    grid-template-columns:repeat(3, minmax(0,1fr));
-    gap:12px;
+  table {
+    border-collapse: collapse;
+    width: 100%;
   }
 
-  /* remove inner padding so borders line up perfectly */
-  #PreDeploy .tile,
-  #FieldDeployment .tile{
-    padding:0 !important;
-    border:0 !important;            /* border goes on the media itself */
-    border-radius:var(--media-radius);
-    overflow:hidden;
-    aspect-ratio:3/4;               /* same tile height for all */
-    background:transparent;
+  td,
+  th {
+    text-align: left;
+    padding: 8px;
   }
 
-  /* same border & radius for EVERY image/video (overrides any inline styles) */
-  .redactor figure img,
-  .redactor figure video,
-  figure img,
-  figure video{
-    display:block;
-    width:100%;
-    height:auto;
-    border:1px solid var(--media-border) !important;
-    border-radius:var(--media-radius) !important;
-    background:#000;                /* neat letterbox behind videos */
-  }
+  /* tr:first-child {
+    width: auto;
+  } */
+  h2 {
+  /* background-color: #00ffb5; Highlight color */
+  color: #00ffb5;            /* Text color */
+  /* padding: 10px;             Padding around the text */
+  border-radius: 5px;        /* Optional: Rounded corners */
+  font-weight: bold;         /* Bold text */
+  text-align: left;        /* Center the text */
+}
+/* Make the navbar horizontally scrollable AND sticky */
+.navbar {
+  overflow-x: auto;           /* Enable horizontal scrolling */
+  white-space: nowrap;        /* Prevent line breaks within the navbar */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+  position: sticky;           /* Make the navbar sticky */
+  top: 0;                     /* Stick to the top of the viewport */
+  z-index: 100;               /* Ensure it stays above other content */
+  background-color: #000;     /* Black background to match the header */
+  padding: 8px 0;             /* Add some padding for better visibility */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Add subtle shadow for depth */
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
 
-  /* photos fill; videos show full frame (no crop) */
-  #PreDeploy .tile img,
-  #FieldDeployment .tile img{ height:100%; object-fit:cover; }
-  #PreDeploy .tile video,
-  #FieldDeployment .tile video{ height:100%; object-fit:contain; }
+/* Optional: Hide scrollbar for WebKit browsers */
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 
-  /* responsive */
-  @media (max-width:900px){
-    #PreDeploy .gallery, #PreDeploy .media-grid, #FieldDeployment .media-grid{
-      grid-template-columns:repeat(2,1fr);
-    }
-  }
-  @media (max-width:560px){
-    #PreDeploy .gallery, #PreDeploy .media-grid, #FieldDeployment .media-grid{
-      grid-template-columns:1fr;
-    }
-  }
+/* Add gradient fading effect to indicate more content */
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  pointer-events: none;
+}
+
+.navbar::before {
+  left: 0;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
+
+.navbar::after {
+  right: 0;
+  background: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+}
+
+.navbar {
+  position: relative;
+}
+
 </style>
+
+<body class="relative">
+
+  <!-- Header -->
+  <header>
+
+    <div class="absolute inset-0 w-full h-full pointer-events-none">
+      <video src="assets/animation/header.mp4" class="w-full h-full object-cover" loop muted playsinline autoplay></video>
+    </div>
+
+    <div class="relative z-10 w-full flex flex-col">
+      <!-- Header Logo -->
+
+
+      <!-- Header Image -->
+      <div class="container lg:p-20 h-full flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-2xl md:text-5xl leading-tight">VELUM – Vehicle Envelope with Lightweight Ultrafilm<br>
+          for Minimal Leakage</h1>
+          <div class="mt-10">
+   
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+<nav class="navbar">
+  <ul id="nav">
+    <li><a href="#Introduction" class="p-4">Introduction</a></li>
+    <li><a href="#Manufacturing" class="p-4">Manufacturing</a></li>
+    <li><a href="#Coating" class="p-4">Coating</a></li>
+    <li><a href="#TestsResults" class="p-4">Tests &amp; Results</a></li>
+    <li><a href="#Deployment" class="p-4">Deployment</a></li>
+    <!-- REMOVE for double-blind:
+    <li><a href="#contact" class="p-4">Contact</a></li>
+    -->
+  </ul>
+</nav>
+
+<!-- ----------------------------------------------------------------------------->
+<!-- Introduction Section -->
+<section id="Introduction" class="bg-black text-white"  style="text-align: justify; padding-bottom: 20px;">
+  <div class="container redactor">
+    <div class="w-full">
+      
+    <h2>Introduction</h2>
+    <p>
+      This page complements a journal paper (submitted) on <b>VELUM</b>, a lightweight coated low-density polyethylene (LDPE) membrane for
+      small lighter-than-air (SLTA) vehicles. It provides extra visuals and brief highlights only.
+    </p>
+      
+    <p>
+     Conventional envelopes present trade-offs: polyurethane (PU) is durable yet heavy and more permeable,
+      whereas Mylar® is light and gas-tight but brittle. The proposed coated LDPE reduces mass and leakage 
+      and improves tear tolerance while retaining simple, scalable fabrication.
+    </p>
+
+
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/cover.png" alt="Velum Airship" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Velum Airship.</figcaption>
+      </figure>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+<!-- ----------------------------------------------------------------------------->
+<!-- Manufacturing Section -->
+<section id="Manufacturing" class style="text-align: justify;">
+  <div class="container redactor">
+    <div class="w-full">
+
+   <h2>Manufacturing Concept</h2>
+    <p>
+      Envelopes of identical geometry were made from different materials: LDPE was built in our lab, 
+      while PU and Mylar® came from industrial manufacturers. Mylar was later excluded due to brittleness, 
+      so comparisons focused on LDPE versus PU.
+    </p>
+      
+      <!-- Figure Section -->
+      <!-- Figure 1 -->
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/pic1- cuting pices.jpg" alt="Cutting LDPE panels" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Cutting of LDPE panels for the VELUM envelope.</figcaption>
+      </figure>
+
+      <!-- Figure 2 -->
+      <figure>
+        <img src="assets/images/pic2- sealing pices.jpg" alt="Sealing LDPE panels" 
+             style="width:100%; max-width:1800px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: Sealing of LDPE panels for the VELUM envelope.</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Remove any gray overlay/desaturation applied elsewhere */
+  figure img, .redactor img, img {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    background: none !important;
+  }
+  figure::before, figure::after { content: none !important; background: none !important; }
+
+  /* (Optional) ensure header overlay can't tint later content */
+  header { position: relative; z-index: 0; }
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- ----------------------------------------------------------------------------->
+<!-- Coating Section -->
+<section id="Coating" class="bg-black text-white" style="text-align: justify;">
+  <div class="container redactor">
+    <div class="w-full">
+
+  <h2>Coating</h2>
+  <p>
+   Multiple tests were performed on small LDPE samples to identify the most effective coating method.
+   The selected method, detailed in the paper, achieved superior surface coverage and was applied to the final envelope,
+   thereby improving gas retention and durability.
+  </p>
+
+  <!-- Figure Section -->
+  <!-- Figure 1 -->
+      <figure style="margin-bottom: 20px;">
+        <img src="assets/images/coating-pic.jpg" alt="Cutting LDPE panels" 
+             style="width:100%; max-width:1600px; margin:auto; display:block;">
+        <figcaption style="text-align: center;">Figure: VELUM envelo
