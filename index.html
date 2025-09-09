@@ -461,11 +461,11 @@
         <figure class="tile"><img src="assets/images/23.png" alt="Cave chamber view 5"></figure>
         <figure class="tile"><img src="assets/images/8.png"  alt="Cave deployment from kayak"></figure>
         <figure class="tile"><img src="assets/images/26.png" alt="Cave still frame A"></figure>
-        <figure class="tile"><img src="assets/images/30.JPG" alt="Cave still frame B"></figure>
+        <figure class="tile"><img src="assets/images/30.jpg" alt="Cave still frame B"></figure>
 
             <!-- 1 video + 2 images to keep 3 per row -->
         <figure class="tile">
-          <video controls preload="none" poster="assets/images/31.JPG">
+          <video controls preload="none" poster="assets/images/31.jpg">
             <source src="assets/videos/Deployment-02.mp4" type="video/mp4">
           </video>
         </figure>
@@ -526,39 +526,47 @@
       grid-template-columns: 1fr;
     }
   }
-</style>" 
+</style>
 
 <style>
-
   :root{
     --page-max:1100px; --section-py:24px; --container-px:16px;
     --figure-m:12px; --grid-gap:10px;
   }
-  .container.redactor{max-width:var(--page-max)!important;margin:auto!important;padding-inline:var(--container-px)!important;}
+  .container.redactor{
+    max-width:var(--page-max)!important;
+    margin:auto!important;
+    padding-inline:var(--container-px)!important;
+  }
   section{padding:var(--section-py) 0!important;}
-  h2{margin:10px 0 8px!important;} p{margin:10px 0!important;line-height:1.55;}
+  h2{margin:10px 0 8px!important;}
+  p{margin:10px 0!important;line-height:1.55;}
   ul{margin:8px 0 8px 20px!important;}
-  figure{margin:var(--figure-m) 0!important;} figcaption{margin-top:6px!important;}
+  figure{margin:var(--figure-m) 0!important;}
+  figcaption{margin-top:6px!important;}
   header .container{padding:1.5rem var(--container-px)!important;}
-  @media (min-width:1024px){ header .container{padding:3rem var(--container-px)!important;} }
+  @media (min-width:1024px){
+    header .container{padding:3rem var(--container-px)!important;}
+  }
   #PreDeploy .gallery{gap:var(--grid-gap)!important;}
-  #PreDeploy .tile,#FieldDeployment .tile{padding:6px!important;}
-  #PreDeploy .media-grid,#FieldDeployment .media-grid{gap:var(--grid-gap)!important;}
+  #PreDeploy .tile,
+  #FieldDeployment .tile{padding:6px!important;}
+  #PreDeploy .media-grid,
+  #FieldDeployment .media-grid{gap:var(--grid-gap)!important;}
   html,body{margin:0;padding:0}
 </style>
 
 <style>
-  /* پهن‌تر کردن ظرف محتوا در دسکتاپ */
+  /* widen the content container on large screens */
   @media (min-width: 1200px){
     .container.redactor{
-      /* پهنای مفید صفحه؛ هر عددی خواستی بگذار (1400–1600 هم خوبه) */
-      max-width: 1500px !important;
+      max-width: 1500px !important; /* adjust width as needed */
       padding-left: 12px !important;
       padding-right: 12px !important;
     }
   }
 
-  /* اگر می‌خوای فقط بعضی سکشن‌ها پهن‌تر بشن (مثلاً Manufacturing/Coating) */
+  /* widen only specific sections on large screens */
   @media (min-width: 1200px){
     #Manufacturing .container.redactor,
     #Coating .container.redactor,
@@ -570,4 +578,5 @@
 
 </body>
 </html>
+
 
