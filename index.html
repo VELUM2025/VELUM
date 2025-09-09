@@ -132,10 +132,13 @@
       This page complements a journal paper (submitted) on <b>VELUM</b>, a lightweight coated-LDPE membrane for
       small lighter-than-air (SLTA) vehicles. It provides extra visuals and brief highlights only.
     </p>
+      
     <p>
-      Conventional envelopes—<b>PU</b> (durable but heavy and more permeable) and <b>Mylar®</b> (light and tight but brittle)—force trade-offs.
-      Our <b>coated LDPE</b> approach targets low mass, better tear tolerance, and lower leakage while keeping simple, scalable fabrication.
+   Conventional envelopes present trade-offs: polyurethane (PU) is durable yet heavy and more permeable,
+      whereas Mylar® is light and gas-tight but brittle. The proposed coated LDPE reduces mass and leakage 
+      and improves tear tolerance while retaining simple, scalable fabrication.
     </p>
+
 
       <figure style="margin-bottom: 20px;">
         <img src="assets/images/cover.png" alt="Velum Airship" 
@@ -207,39 +210,58 @@
     <div class="w-full">
 
   <h2>Coating</h2>
-    <p>
-      Multiple tests were performed on small LDPE samples to identify the most effective coating method. 
-      The selected approach provided the best surface coverage and was then applied to the final envelope, 
-      improving gas retention and durability.
-    </p>
+  <p>
+   Multiple tests were performed on small LDPE samples to identify the most effective coating method. The selected method—detailed in the paper—achieved superior surface coverage and was applied to the final envelope, improving gas retention and durability.
+  </p>
 
-      <!-- Figure Section -->
-      <!-- Figure 1 -->
+
+  <!-- Figure Section -->
+  <!-- Figure 1 -->
       <figure style="margin-bottom: 20px;">
-        <img src="assets/images/pic3- coating.jpg" alt="Cutting LDPE panels" 
+        <img src="assets/images/coating-pic.jpg" alt="Cutting LDPE panels" 
              style="width:100%; max-width:1600px; margin:auto; display:block;">
         <figcaption style="text-align: center;">Figure: VELUM envelope  coating.</figcaption>
-      </figure>
-      <!-- Video Section -->
-      <div style="margin-top: 20px;">
-        <video controls style="width: 100%; height: auto;">
-          <source src="assets/videos/coating.mp4" type="video/mp4">
-    
-        </video>
-      </div>
-      <!-- <figure>
-        <img src="assets/images/inputvector.png" alt="Input vectors for Ego-GRU and Collective-GRU" style="width:100%; max-width:1000px; margin:auto; display:block;">
-        <figcaption style="text-align: center;">Figure: Input vectors for Ego-GRU and Collective-GRU.</figcaption>
-      </figure> -->
+    </figure>
 
-    </div>
-  </div>
+      
+    <!-- Video Section (two side-by-side with captions) -->
+      <div style="
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap:16px;
+      align-items:start;
+      ">
+   <figure style="margin:0;">
+    <video controls playsinline style="width:100%; height:auto;">
+      <source src="assets/videos/coating 0.mp4" type="video/mp4">
+    </video>
+    <figcaption style="text-align:center; margin-top:8px;">
+       Coating Mini Velum.
+    </figcaption>
+  </figure>
+
+  <figure style="margin:0;">
+    <video controls playsinline style="width:100%; height:auto;">
+      <source src="assets/videos/coating 1.mp4" type="video/mp4">
+    </video>
+    <figcaption style="text-align:center; margin-top:8px;">
+       Coating main Velum.
+    </figcaption>
+  </figure>
+</div>
+
 </section>
   
 <!-- ----------------------------------------------------------------------------->
+   <!-- Tests & Results -->
+   <section id="Tests &amp; Results" class="bg-black text-white" style="text-align: justify;">
+   <div class="container redactor">
+   <div class="w-full">
+      
     <h2>Tests &amp; Results</h2>
     <p>
-      Only a short overview is shown here — full data and methods are detailed in the submitted paper.
+    Only a short overview is shown here; full data and methods are detailed in the submitted paper.
     </p>
 
     <ul style="margin-left:20px; line-height:1.6;">
@@ -251,72 +273,64 @@
     </ul>
 
     <p style="margin-top:14px;">
-      Visuals below illustrate representative leakage and burst behaviors.
+    Leakage test setup with the envelope suspended from a 50 N load cell in a controlled environment, as shown below:
     </p>
-  
-     </p>
-        Gas-barrier testing required custom methods, as no ASTM standards apply at full-envelope scale. 
-        Pillow samples (800 × 1200 mm) were helium-inflated to 4 kPa and suspended from a 50 N load cell in a controlled room (26–27 °C). 
-        Lift was monitored over six hours to capture permeability, seam quality, and geometry effects. 
-        Durability was assessed by tumble agitation before repeating retention tests.
-      </p>
-
-
-<!-- Four Pictures in One Line -->
+      
+  <!-- Four Pictures in One Line -->
 <div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px; justify-content:center;">
 
   <figure style="width:23%; text-align:center; margin:0;">
     <img src="assets/images/mylar-leak.png" alt="Pillow-shaped sample" 
          style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;"> Mylar pillow</figcaption>
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> Mylar pillow leakage test</figcaption>
   </figure>
 
   <figure style="width:23%; text-align:center; margin:0;">
     <img src="assets/images/ldpe-leak.png" alt="Sample on load cell" 
          style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;"> LDPE pillow</figcaption>
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> LDPE pillow leakage test</figcaption>
   </figure>
 
   <figure style="width:23%; text-align:center; margin:0;">
     <img src="assets/images/pu-leak.png" alt="Pressure sensor setup" 
          style="width:100%; height:auto; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;"> PU pillow</figcaption>
+    <figcaption style="font-size:0.9rem; margin-top:6px;"> PU pillow leakage test</figcaption>
   </figure>
 </div>
 
      <p>
-        Burst tests (800 × 1200 mm samples, compressed air) replicated biaxial stress conditions. 
-        Mylar reached the highest pressure but failed explosively, PU failed at the lowest pressure after ductile thinning, 
-        and LDPE ruptured at 3.08 kPa in a controlled slit, showing strong seals and safer failure behavior. 
-        This confirms LDPE’s balanced strength–ductility profile and reliable seam integrity for reusable airships.
+      Burst tests (800×1200 mm samples; compressed air) replicated biaxial loading;
+      Mylar carried the highest pressure before catastrophic rupture, PU failed first after
+      ductile thinning, and LDPE ruptured at 3.08 kPa along a controlled slit—evidence of
+      strong seams and a non-catastrophic failure mode (shown below).
       </p>
 
 <!-- Video Section -->
 <div style="display:flex; gap:2%; margin-top:20px; margin-bottom:20px;">
 
-  <figure style="width:32%; text-align:center; margin:0;">
+<figure style="width:32%; text-align:center; margin:0;">
     <video controls style="width:100%; height:auto;">
       <source src="assets/videos/mylar-burst.mp4" type="video/mp4">
     </video>
     <img src="assets/images/mylar-pic.png" alt="Mylar Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;">Mylar Burst Test</figcaption>
-  </figure>
+    <figcaption style="font-size:0.9rem; margin-top:6px;">Mylar burst test</figcaption>
+</figure>
 
-  <figure style="width:32%; text-align:center; margin:0;">
+<figure style="width:32%; text-align:center; margin:0;">
     <video controls style="width:100%; height:auto;">
       <source src="assets/videos/LDPE-burst .mp4" type="video/mp4">
     </video>
     <img src="assets/images/LDPE-pic.png" alt="LDPE Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;">LDPE Burst Test</figcaption>
-  </figure>
+    <figcaption style="font-size:0.9rem; margin-top:6px;">LDPE burst test</figcaption>
+ </figure>
 
     <figure style="width:32%; text-align:center; margin:0;">
     <video controls style="width:100%; height:auto;">
       <source src="assets/videos/pu-burst.mp4" type="video/mp4">
     </video>
     <img src="assets/images/PU-pic.png" alt="PU Rupture" style="width:100%; height:auto; margin-top:8px; border:1px solid #ccc; border-radius:6px;">
-    <figcaption style="font-size:0.9rem; margin-top:6px;">PU Burst Test</figcaption>
-  </figure>
+    <figcaption style="font-size:0.9rem; margin-top:6px;">PU burst test</figcaption>
+ </figure>
 
 </div>
 
@@ -337,76 +351,32 @@
 
       <p>
         The <strong>coated LDPE envelope</strong>—selected for its balance of low mass, durability,
-         and helium retention—outperformed polyurethane (PU) in full-scale use. Even with a heavier valve assembly (20.74 g, including a 7 g cap),
-          the LDPE envelope weighed only 343 g versus PU’s 401 g, preserving payload capacity for a lidar and micro-camera. Field results showed <strong>
-          stable flight, superior helium retention, moisture resistance, faster deployment,
-          and longer endurance</strong>. The LDPE vehicle supported a 250 g payload (vs. 164 g for PU), remained inflated for days without
-          refilling (PU required multiple refills per day), deployed in ~15 min (vs. 25 min), and sustained 72 h of operation (vs. 24 h). Together,
-          these outcomes validate coated LDPE as a <strong>robust, lightweight, and resilient</strong> material for
-           autonomous airship missions in confined and humid environments.
+        and helium retention-outperformed polyurethane (PU) in full-scale use.
       </p> 
 
-    <!-- Table (white background) -->
-    <figure style="margin:28px 0;">
-      <figcaption style="font-weight:600; color:#fff; margin:0 0 8px 0;">
-        Table — Performance parameters for single‑body indoor airships made from LDPE and PU (field comparison).
-      </figcaption>
-      <div style="overflow:auto; border:1px solid #ccc; border-radius:10px; background:#fff;">
-        <table style="width:100%; border-collapse:collapse; font-size:0.95rem; color:#000;">
-          <thead style="background:#f4f4f4;">
-            <tr>
-              <th style="text-align:left; padding:12px; border-bottom:1px solid #ccc;">Parameter</th>
-              <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">LDPE</th>
-              <th style="text-align:right; padding:12px; border-bottom:1px solid #ccc;">PU</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Volume (m³)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.86</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">0.86</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Rigid Skeleton Weight (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">215</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">215</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Avionic Weight (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">223.62</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">223.62</td></tr>
-            <tr style="background:#f4f4f4;"><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Weight (Non‑Coated LDPE) (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">325</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">401</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Envelope Weight (Coated LDPE) (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">343</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">401</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Airship Free Payload Capacity (g)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">250</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">164</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Helium Loss Rate (g/h)</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">1.7</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">4.2</td></tr>
-            <tr><td style="padding:10px;border-bottom:1px solid #ddd;">Moisture Absorption</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">None</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">High</td></tr>
-            <tr><td style="padding:10px;">Operational Endurance (hours)</td><td style="padding:10px;text-align:right;">72</td><td style="padding:10px;text-align:right;">24</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-<!-- ========================= -->
-<!-- Pre-Deployment Flight Tests -->
+   <!-- ========================= -->
+    <!-- Pre-Deployment Flight Tests -->
 <section id="PreDeploy" class="bg-black text-white" style="text-align:justify; padding:10px 0 24px;">
   <div class="container redactor">
-    <div class="w-full">
-      <h2>Pre-Deployment Flight Tests</h2>
-      <p style="margin-top:6px;">
-        Bench and indoor flight trials to verify buoyancy, controls, sealing integrity, and handling prior to the cave mission.
-      </p>
+    <h2>Pre-Deployment Flight Tests</h2>
+    <p style="margin-top:6px;">
+      Bench and indoor flight trials to verify buoyancy, controls, sealing integrity, and handling prior to the cave mission.
+    </p>
 
+    <!-- ===== Group 1: LDPE (lab-fabricated) ===== -->
+    <div class="media-group">
+      <h3>LDPE — Lab-fabricated Envelope</h3>
+
+      <h4 class="media-label">Photos</h4>
       <div class="media-grid">
-        <!-- images -->
-        <figure class="tile"><img src="assets/images/9.png"  alt="pic9"></figure>
-        <figure class="tile"><img src="assets/images/3.png"  alt="pic3"></figure>
-        <figure class="tile"><img src="assets/images/4.png"  alt="pic4"></figure>
+        <figure class="tile"><img loading="lazy" src="assets/images/9.png"  alt="LDPE test photo 1"></figure>
+        <figure class="tile"><img loading="lazy" src="assets/images/3.png"  alt="LDPE test photo 2"></figure>
+        <figure class="tile"><img loading="lazy" src="assets/images/4.png"  alt="LDPE test photo 3"></figure>
+        <!-- add more photos as needed ... -->
+      </div>
 
-        <figure class="tile"><img src="assets/images/13.png" alt="pic13"></figure>
-        <figure class="tile"><img src="assets/images/19.png" alt="pic19"></figure>
-        <figure class="tile"><img src="assets/images/14.png" alt="pic14"></figure>
-
-        <figure class="tile"><img src="assets/images/18.png" alt="pic18"></figure>
-        <figure class="tile"><img src="assets/images/15.png" alt="pic15"></figure>
-        <figure class="tile"><img src="assets/images/16.png" alt="pic16"></figure>
-
-        <figure class="tile"><img src="assets/images/17.png" alt="pic17"></figure>
-        <figure class="tile"><img src="assets/images/21.png" alt="pic21"></figure>
-        <figure class="tile"><img src="assets/images/22.png" alt="pic22"></figure>
-
-        <figure class="tile"><img src="assets/images/28.png" alt="pic28"></figure>
-        <figure class="tile"><img src="assets/images/11.png" alt="pic11"></figure>
-        <figure class="tile"><img src="assets/images/12.png" alt="pic12"></figure>
-
-        <!-- videos (3 across exactly like images) -->
+      <h4 class="media-label">Videos</h4>
+      <div class="media-grid">
         <figure class="tile">
           <video controls preload="none" poster="assets/images/21.png">
             <source src="assets/videos/experimental_test-01.mp4" type="video/mp4">
@@ -420,6 +390,39 @@
         <figure class="tile">
           <video controls preload="none" poster="assets/images/12.png">
             <source src="assets/videos/experimental_test-03.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </div>
+
+    <!-- ===== Group 2: PU (industrial) ===== -->
+    <div class="media-group">
+      <h3>PU — Industrial Envelope</h3>
+
+      <h4 class="media-label">Photos</h4>
+      <div class="media-grid">
+        <figure class="tile"><img loading="lazy" src="assets/images/13.png" alt="PU test photo 1"></figure>
+        <figure class="tile"><img loading="lazy" src="assets/images/19.png" alt="PU test photo 2"></figure>
+        <figure class="tile"><img loading="lazy" src="assets/images/14.png" alt="PU test photo 3"></figure>
+        <!-- add more photos as needed ... -->
+      </div>
+
+      <h4 class="media-label">Videos</h4>
+      <div class="media-grid">
+        <!-- replace with PU videos/posters -->
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/28.png">
+            <source src="assets/videos/pu_test-01.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/11.png">
+            <source src="assets/videos/pu_test-02.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="tile">
+          <video controls preload="none" poster="assets/images/12.png">
+            <source src="assets/videos/pu_test-03.mp4" type="video/mp4">
           </video>
         </figure>
       </div>
